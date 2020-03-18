@@ -1,0 +1,51 @@
+<h1>hello users</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>M1</th>
+            <th>M2</th>
+            <th>TOTAL</th>
+        </tr>
+    </thead>
+
+<tbody *ngFor="let user of abc">
+    <tr [ngStyle]="{background:user.total>200?'green':'yellow'}">
+       
+       
+                   <td>{{user.id}}</td>
+                   <td>{{user.name}}</td>
+                   <td>{{user.m1}}</td>
+                   <td>{{user.m2}}</td>
+                   <td>{{user.total}}</td>
+                           </tr>
+</tbody>
+        
+       </table>
+
+       <table style="margin-top: 20px;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>M1</th>
+                <th>M2</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+    
+    <tbody *ngFor="let user of abc">
+        <tr [ngClass]="{'users':user.total<200}" style="background-color: green;">
+           
+           
+                       <td>{{user.id}}</td>
+                       <td>{{user.name}}</td>
+                       <td>{{user.m1}}</td>
+                       <td>{{user.m2}}</td>
+                       <td>{{user.total}}</td>
+                               </tr>
+    </tbody>
+            
+           </table>
+    

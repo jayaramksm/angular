@@ -1,0 +1,23 @@
+<h1>hii about</h1>
+<button (click)="gethttp()">HTTPREQUEST</button>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>USERNAME</th>
+            <th>EMAIL</th>
+            <th>PHONE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let http of htt">
+            <td (click)="abc()" >{{http.id}}</td>
+            <td>{{http.name}}</td>
+            <td>{{http.username}}</td>
+            <td>{{http.email}}</td>
+            <td>{{http.phone}}</td>
+        </tr>
+    </tbody>
+</table>
+<span>last</span><span>1</span><span>2</span><span>next</span>
