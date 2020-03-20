@@ -9,6 +9,7 @@ import { from } from 'rxjs';
 import { ServiceService } from './service.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { homeComponent } from './home/home.component';
+import { ipecomponent } from './pipe/shortpipe';
 
 
 const router:Routes=[{
@@ -21,8 +22,9 @@ const router:Routes=[{
   component:usersComponent
 },
 {
-  path:"home",
-  component:homeComponent
+  path:"home/:id",
+  component:homeComponent,
+  data:{ jay:"hello jayaram"}
 },
 {
   path:"",
@@ -33,7 +35,7 @@ const router:Routes=[{
 
 @NgModule({
   declarations: [
-    AppComponent,usersComponent,aboutComponent,homeComponent
+    AppComponent,usersComponent,aboutComponent,homeComponent,ipecomponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(router),HttpClientModule

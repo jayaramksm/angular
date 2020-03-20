@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { ServiceService } from '../service.service';
 import { Route } from '@angular/compiler/src/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
     selector:"about",
@@ -12,9 +12,11 @@ import { Router } from '@angular/router';
 export class aboutComponent {
     htt:any=[]
     ht:any=[]
+    id=null
     constructor(public http:ServiceService,public router:Router){}
-    abc(){
-      this.router.navigate(["/home"])
+    
+    abc(http){
+      this.router.navigate(["/home",http.id])
     }
     gethttp(){
    this.http.getapi().subscribe((data)=>{
@@ -24,12 +26,5 @@ export class aboutComponent {
    })
     }
 
-    gethtt(){
-      alert("hiii")
-      this.http.getall().subscribe((data)=>{
-        this.ht=data
-      },(err)=>{
-        alert("loading error")
-      })
-       }
+   
 }

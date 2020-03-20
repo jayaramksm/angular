@@ -10,7 +10,7 @@ export class ServiceService {
   getapi(){
 return this.http.get("https://jsonplaceholder.typicode.com/users")
   }
-  getall(){
-    return this.http.get("https://jsonplaceholder.typicode.com/users/1")
+  getall(id){
+    return this.http.get("https://jsonplaceholder.typicode.com/users/"+id)
       }
 }
