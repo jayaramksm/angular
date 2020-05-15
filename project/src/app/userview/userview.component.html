@@ -1,0 +1,26 @@
+
+<div class="card">
+    <div class="card-header text-center">{{view.id}}{{view.name}}</div>
+    <div class="card-body row">
+        <div class="col-md-6 text-center">{{view.username}}</div>
+        <div class="col-md-6 text-center">{{view.phone}}</div>
+    </div>
+    <div class="card-footer text-center">{{view.email}}</div>
+        
+</div>
+
+<div class="text-center mt-5 ml-5">
+<ul class="pagination pagination-lg text-center ml-5 mt-5">
+    <li class="page-item"><a class="page-link" href="#/post" RouterLinkActive>Previous</a></li>
+ 
+    <li *ngFor="let page of pageitems"  class="page-item"><span class="page-link"  (click)="gopage(page)">
+        {{page}}</span></li>
+  
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</div>
+
+  
+<div class="text-center mt-5">
+    <!-- <button class="btn btn-primary text-center p-3" ><a class="page-link" href="#/user" RouterLinkActive>GO BACK</a></button> -->
+<button class="btn btn-primary text-center p-3" (click)="goback()">GO BACK</button></div>

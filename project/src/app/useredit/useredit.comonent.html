@@ -1,0 +1,35 @@
+<div class="container-fluid bg-warning p-5">
+            
+            <div class="row mt-0">
+                    <span class="col-md-1"></span>
+                    <input class="form-control col-md-4" type="text"  [(ngModel)]=edit.id>
+                    <span class="col-md-2"></span>
+                    <input class="form-control col-md-4" type="text"  [(ngModel)]=edit.name>
+                    <span class="col-md-1"></span>
+                </div>
+                <div class="row mt-4">
+                    <span class="col-md-1"></span>
+                    <input class="form-control col-md-4" type="text"  [(ngModel)]=edit.username>
+                    <span class="col-md-2"></span>
+                    <input class="form-control col-md-4" type="text"  [(ngModel)]=edit.email>
+                    <span class="col-md-1"></span>
+                </div>
+
+                <div class="row mt-4 ">
+                      <span class="col-md-1"></span>
+                    <input class="form-control col-md-4" type="text" [(ngModel)]=edit.phone>
+                      <span class="col-md-2"></span>
+                       <input class="form-control col-md-4" type="text" [(ngModel)]=edit.address.city>
+                    <span class="col-md-1"></span>
+                </div>
+
+                <div class="row mt-5 mb-4 ">
+                    <span class="col-md-4"></span>
+                    <button (click)=" getback()"  class="btn btn-primary col-md-1">SUBMIT</button>
+                    <span class="col-md-2"></span>
+                    <button (click)=" getback()" class="btn btn-primary col-md-1">CANCEL</button>
+                    <span class="col-md-4 "></span>
+                    </div>
+                  
+                    <div>{{edit.phone}}</div>
+</div>

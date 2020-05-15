@@ -1,0 +1,26 @@
+
+
+<table class="table mt-4 table-striped">
+<thead>
+    <tr>
+        <th>UID</th>
+        <th>NAME</th>
+        <th>USERNAME</th>
+        <th>EMAIL</th>
+        <th>PHONE</th>
+        <th>CITY</th>
+        <th>VIEW</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let http of users">
+        <td>{{http.id}}</td>
+        <td>{{http.name}}</td>
+        <td>{{http.username}}</td>
+        <td>{{http.email}}</td>
+        <td>{{http.phone}}</td>
+        <td>{{http.address.city}}</td>
+        <td > <span class="mr-2" (click)="editusers(http)">edit</span><label (click)="viewusers(http)" >view</label></td>
+     </tr>
+</tbody>
+</table>

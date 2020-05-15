@@ -1,0 +1,15 @@
+<div *ngFor="let pagenav of page ">
+    <div class="card mt-5">
+        <div class="card-header bg-warning text-center">{{pagenav.id}}{{pagenav.name}}</div>
+        <div class="card-body row">
+            <div class="col-md-6 text-center">{{pagenav.username}}</div>
+            <div class="col-md-6 text-center">{{pagenav.phone}}</div>
+        </div>
+        <div class="card-footer text-center">{{pagenav.email}}</div>
+        .
+    </div>
+</div>
+<div class="text-center mt-5">
+    <button class="btn btn-primary text-center p-3" ><a class="page-link" href="#/user"
+         RouterLinkActive>GO BACK</a></button>
+        </div>

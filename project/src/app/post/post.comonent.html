@@ -1,0 +1,21 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>USERID</th>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>BODY</th>
+            <th>VIEW</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let post of getpost">
+            <td>{{post.userId}}</td>
+            <td>{{post.id}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.body}}</td>
+            <td><span (click)="getpostview(post.id)" class="mr-2">view</span> <span>edit</span></td>
+        </tr>
+    </tbody>
+</table>
+ 
