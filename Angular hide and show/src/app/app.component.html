@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+    <div class="bs-example sticky">
+    <nav class="navbar navbar-expand-md navbar-light bg-white">
+      <img id="logo" src="https://image.shutterstock.com/image-vector/ms-initial-letters-looping-linked-600w-419244904.jpg" alt="">
+        <a href="#" class="navbar-brand Display-1 "><h1>  MEGAROY</h1></a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a (click)="home()" class="nav-item hove nav-link active text-dark font ml-5">HOME</a>
+                 <a (click)="about()" class="nav-item nav-link ml-5 text-dark font">ABOUT US</a>
+          
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle ml-5 text-dark font" data-toggle="dropdown"> SERVICES</a>
+                    <div class="dropdown-menu " style="width: 570px;height: 300px;">
+                      <div class="card-deck">
+                        <div class="card border-0">
+                      
+                        <a (click)="telcome()"  class="dropdown-item font"> Enterprise Application</a>
+                        <a (click)="digital()" class="dropdown-item font">Digital Transformation</a>
+                        <a (click)="project()" class="dropdown-item font">Project Management</a>
+                        <a  (click)="digitalmarketing()" class="dropdown-item font">Digital Marketing Solutions</a>
+                        
+                      </div>
+                      <div class="card border-0">
+                        <a  (click)="it()" class="dropdown-item font">IT Staffing and Consulting Services</a>
+                        <a (click)="qa()" class="dropdown-item font">QA & Testing</a>
+                       
+                        <a (click)="data()" class="dropdown-item font">Data Management & Integration</a>
+                        <a (click)="maintenance()" class="dropdown-item font">Maintenances & Support</a>
+                      </div>
+
+                      
+
+                    </div>
+
+                    </div>
+
+                </div>
+                <a (click)="careers()" class="nav-item nav-link text-dark ml-5 font">CAREERS</a>
+          
+            
+           
+            <a (click)="contact()" class="nav-item nav-link ml-5 text-dark font">CONTACT</a>
+           
+            </div>
+            
+        </div>
+    </nav>
+</div>
+<router-outlet></router-outlet>
+
+</body>
+
+</html>

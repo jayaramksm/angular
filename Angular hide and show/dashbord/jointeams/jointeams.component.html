@@ -1,0 +1,594 @@
+<!-- <dss="container p-2">
+    <div class="text-right">
+    <h1>00:00:00</h1>
+</div>
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-4 bg-light p-3">
+            <div class="text-center mb-4"><h2> Team A </h2></div>
+            <div class="d-flex justify-content-around mt-5 ">
+            <i class="fas fa-user-friends fa-3x text-center fa-3x bg-primary" style="width: 100px;height: 100px;"></i>
+            <i class="fas fa-user-friends fa-3x text-center fa-3x bg-primary" style="width: 100px;height: 100px;"></i>
+        </div>
+        </div>
+        <div class="col-md-2 text-center " style="margin-top: 105px;"><h1>VS</h1> </div>
+        <div class="col-md-4 bg-light p-3">
+            <div class="text-center mb-4"><h2> Team A </h2></div>
+            <div class="d-flex justify-content-around mt-5 ">
+            <i class="fas fa-user-friends fa-3x text-center fa-3x bg-primary" style="width: 100px;height: 100px;"></i>
+            <i class="fas fa-user-friends fa-3x text-center fa-3x bg-primary" style="width: 100px;height: 100px;"></i>
+        </div>
+        </div>
+        <div class="col-md-1"></div>
+
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 btn btn-dark mt-4 text-center text-white">JOIN</div>
+        <div class="col-md-3"></div>
+    </div>
+</div> -->
+
+
+<!-- 
+<div class="container">
+    <div class="table">
+        
+           
+                <input type="text" [(ngModel)]="input" class="form-control">
+           
+        {{input}}
+        <tbody>
+            <tr>
+               
+                <td [(ngModel)]=" th1" (click)="thi()">{{th1}}</td>
+                <td (click)="th12()">2</td>
+                <td (click)="th23()">3</td>
+                <td>+</td>
+
+            </tr>
+            <tr>
+               
+                <td (click)="th34()">4</td>
+                <td (click)="th45()">5</td>
+                <td (click)="th56()">6</td>
+                <td>-</td>
+                
+            </tr>
+            <tr>
+               
+                <td (click)="th67()">7</td>
+                <td (click)="th78()">8</td>
+                <td (click)="th89()">9</td>
+                <td>*</td>
+                
+            </tr>
+            <tr>
+               
+                <td>%</td>
+                <td (click)="th90()">0</td>
+                <td></td>
+                <td>=</td>
+                
+            </tr>
+        </tbody>
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<div class="container-fluid m-0 p-0">
+
+    <div class="p-4 bg-dark text-white ">
+        <i (click)="hideprofile()" class="fas fa-list-ul fa-3x ml-4" style="color:white;"></i>
+        <a routerLink="/menucomponent"><i class="text-white fas fa-home fa-3x ml-4"></i></a>
+        <a routerLink="/dashboard"><i  class="fas fa-th-large text-white ml-4 fa-3x"></i></a>
+    </div>
+    <div class="row m-0 p-0">
+
+    <div *ngIf="hide" class="col-md-2">
+        <p class="mt-5"> <i class="fa fa-user fa-3x text-center fa-3x " ></i></p>
+        <p class="mt-5"> <i class="fa fa-users fa-3x text-center fa-3x " ></i></p>
+        <p class="mt-5">  <i class="fa fa-cog fa-3x text-center fa-3x " ></i></p>
+        <p class="mt-5"> <i class="fa fa-question-circle fa-3x text-center fa-3x " ></i></p>
+        <p class="mt-5">  <i class="fa fa-file-archive-o fa-3x text-center fa-3x "></i></p>
+        <p class="mt-5"> <i class="fa fa-comments fa-3x text-center fa-3x" ></i></p>
+        <p class="mt-5">  <i class="fa fa-power-off fa-3x text-center fa-3x " ></i></p>
+    </div>
+
+<div class=" col-md-8 container-fluid  m-0 p-0">
+   
+    <div class="row p-0 m-0">
+    
+        <div class="col-md-1 text-white bg-dark">
+            <p class="mt-5"> <i class="fa fa-user fa-3x text-center fa-3x " ></i></p>
+            <p class="mt-5"> <i class="fa fa-users fa-3x text-center fa-3x " ></i></p>
+            <p class="mt-5">  <i class="fa fa-cog fa-3x text-center fa-3x " ></i></p>
+            <p class="mt-5"> <i class="fa fa-question-circle fa-3x text-center fa-3x " ></i></p>
+            <p class="mt-5">  <i class="fa fa-file-archive-o fa-3x text-center fa-3x "></i></p>
+            <p class="mt-5"> <i class="fa fa-comments fa-3x text-center fa-3x" ></i></p>
+            <p class="mt-5">  <i class="fa fa-power-off fa-3x text-center fa-3x " ></i></p>
+        </div>
+        <div class="col-md-2 p-0 m-0">
+         <div class="bg-light w-100 text-center p-1">
+            <p> <i class="fa fa-clock-o fa-3x text-center fa-3x " ></i></p>
+            <h1 class="mt-2">00.00.00</h1>
+         </div>
+         <div class="bg-light w-100 mt-2 text-center p-1">
+            <p> <i class="fa fa-stop-circle  text-danger  fa-3x text-center fa-3x " ></i></p>
+            <h1 class="mt-2">Buzzer</h1>
+         </div>
+         <div class="bg-light mt-2 w-100 text-center p-1">
+            <h2 class="text-center text-warning">Team A</h2>
+            <h1 class="mt-2">00.00.00</h1>
+         </div>
+         <div class="bg-light mt-2 w-100 text-center p-1">
+            <h2 class="text-center text-warning">Team B</h2>
+            <h1 class="mt-2">00.00.00</h1>
+         </div>
+         <div class="bg-light mt-2 w-100 text-center p-1">
+            <h2 class="text-center text-warning">Team C</h2>
+            <h1 class="mt-2">00.00.00</h1>
+         </div>
+         <div class="bg-light mt-2 w-100 text-center p-1">
+            <h2 class="text-center text-warning">Team D</h2>
+            <h1 class="mt-2">00.00.00</h1>
+         </div>
+         <div class="bg-light mt-2 w-100 text-center p-1">
+          <button class="btn btn-primary"><h1>Views</h1></button>
+         </div>
+
+        </div>
+
+        <div class="col-md-9">
+            <div class="d-flex justify-content-around mt-2">
+                <span>
+                    <i class="fas fa-user-friends fa-3x text-center fa-3x bg-primary" style="width: 70px;height: 70px;"></i>
+                    <p class="text-center"> Akhil</p>
+                
+                </span>
+                <span>
+                    <i class="fas fa-user-friends fa-3x text-center fa-3x bg-primary" style="width: 70px;height: 70px;"></i>
+                   <p class="text-center"> surya</p></span>
+                <span>
+                    <i class="fas fa-user-friends fa-3x text-center fa-3x bg-primary" style="width: 70px;height: 70px;"></i>
+                    <p class="text-center">  pavan</p></span>
+                <span>
+                    <i class="fas fa-user-friends fa-3x text-center fa-3x bg-primary" style="width: 70px;height: 70px;"></i>
+                    <p class="text-center">pranay</p></span>
+                <span>
+                    <i class="fas fa-user-friends fa-3x text-center fa-3x bg-primary" style="width: 70px;height: 70px;"></i>
+                    <p class="text-center">Darshan</p></span>
+                <span>
+                    <i class="fas fa-user-friends fa-3x text-center fa-3x bg-primary" style="width: 70px;height: 70px;"></i>
+                    <p class="text-center"> ram</p>   
+                </span>
+
+            </div>
+            <div class="d-flex justify-content-around">
+                <div class="col-md-3 bg-light p-3">
+                   
+                    <div class=" mt-5 text-center">
+                        <p class="text-right">  <i class="fa fa-ellipsis-v  fa-3x" ></i></p>
+                        <i class="fas fa-user-friends fa-3x text-center fa-3x bg-primary" style="width: 70px;height: 70px;"></i>
+                       
+                        <div class="text-center mb-4"><h2> Team A </h2></div>
+                    </div>
+            </div>
+            <div class="col-md-3 bg-light p-3">
+                   
+                <div class=" mt-5 text-center">
+                    <p class="text-right">  <i class="fa fa-ellipsis-v  fa-3x" ></i></p>
+                    <i class="fas fa-user-friends fa-3x text-center fa-3x bg-primary" style="width: 70px;height: 70px;"></i>
+                    <div class="text-center mb-4"><h2> Team A </h2></div>
+                </div>
+        </div>
+        <div class="col-md-3 bg-light p-3">
+                   
+            <div class=" mt-5 text-center">
+                <p class="text-right">  <i class="fa fa-ellipsis-v  fa-3x" ></i></p>
+                <i class="fas fa-user-friends fa-3x text-center fa-3x bg-primary" style="width: 70px;height: 70px;"></i>
+                <div class="text-center mb-4"><h2> Team A </h2></div>
+            </div>
+    </div>
+
+        </div>
+
+        <div class="d-flex justify-content-around mt-3">
+            <div class="col-md-3 bg-light p-3">
+               
+                <div class=" mt-5 text-center">
+                    <p class="text-right">  <i class="fa fa-ellipsis-v  fa-3x" ></i></p>
+                    <i class="fa fa-clock-o fa-3x text-center fa-3x bg-primary" style="width: 70px;height: 70px;"></i>
+                    <div class="text-center mb-4"><h2> Team A </h2></div>
+                </div>
+        </div>
+        <div class="col-md-3 bg-light p-3">
+               
+            <div class=" mt-5 text-center">
+                <p class="text-right">  <i class="fa fa-ellipsis-v  fa-3x" ></i></p>
+                <i class="fas fa-user-friends fa-3x text-center fa-3x bg-primary" style="width: 70px;height: 70px;"></i>
+                <div class="text-center mb-4"><h2> Team A </h2></div>
+            </div>
+    </div>
+    <div class="col-md-3 bg-light p-3">
+               
+        <div class=" mt-5 text-center">
+            <p class="text-right">  <i class="fa fa-ellipsis-v  fa-3x" ></i></p>
+            <i class="fas fa-user-friends fa-3x text-center fa-3x bg-primary" style="width: 70px;height: 70px;"></i>
+            <div class="text-center mb-4"><h2> Team A </h2></div>
+        </div>
+</div>
+
+    </div>
+
+    <div class="text-center mt-3    ">
+        <button class="btn btn-dark p-2 text-center">
+            <i class="fa fa-microphone  p-2 fa-2x" style=" text-decoration: black  line-through;"></i>
+            <i class="fa fa-video-camera p-2 fa-2x" style=" text-decoration: black line-through;" ></i>
+            <i class="fa fa-stop-circle  text-danger  p-2 fa-2x" ></i>
+             
+             <i class="fa fa-comments p-2 fa-2x"></i>
+             
+            <i (click)="hideuser()" class="fa fa-users p-2 fa-3x text-center  " ></i>
+            <i class="fa fa-share-square-o p-2 fa-2x" ></i>
+        </button>
+    </div>
+
+        </div>
+    </div>
+
+    
+</div>
+<div *ngIf="display" class=" col-md-2">
+    <ul>
+        <li>pranay</li>
+        <li>jayaram</li>
+        <li>akhil</li>
+        <li>ram</li>
+        <li>jay</li>
+        </ul>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+ -->
+
+
+
+ <app-header>
+ 
+ 
+    <div class="d-flex justify-content-around mt-2 ">
+    <h3>Compete Online</h3>
+     
+    <select id="select-Lang">
+    <option>Choose your Language</option>
+    <option value="Telugu">Telugu</option>
+    <option value="Hindi">Hindi</option>
+    <option value="English">English</option>
+     
+    </select>
+    </div>
+    <div class="row mt-2">
+    <div class="col-md-3"></div>
+    <div class="col-md-3">
+    <button (click)="hideuser()" style="background-color:darkslategrey ; height:40px; border-radius: 8px; font-weight: 700;"
+    class=" btn-md w-100 text-white mt-4 ">
+    <h4>Team - 1</h4>
+    </button>
+    <div *ngIf="display" class="card">
+        <div *ngIf="msg" class="text-danger">Select Number Of Players</div>
+        <div *ngIf="player1">
+            <li> player 1</li>
+           
+           </div>
+           <div *ngIf="player2" >
+            <li>player 1</li>
+            <li>player 2</li>
+            
+           </div>
+           <div *ngIf="player3">
+            <li>player 1</li>
+            <li>player 2</li>
+            <li>player 3</li>
+           
+           </div>
+           <div *ngIf="player4">
+            <li>player 1</li>
+            <li>player 2</li>
+            <li>player 3</li>
+            <li>player 4</li>
+           </div>
+           
+           <div class="d-flex justfy-content-between ml-4 mt-5 ">
+            <div class="team">
+            <h5>Team A</h5>
+            <div class="tm-icon">
+            <i class=" fas fa-user fa-2x"></i>
+            </div>
+            </div>
+           
+            </div>
+        </div>
+  
+     
+    <button (click)="hideprofile()"  style="background-color: darkslategrey; height:40px; border-radius: 8px; font-weight: 700;"
+    class=" btn-md w-100 text-white mt-4 ">
+    <h4>Team - 2</h4>
+    </button>
+    <div *ngIf="hide" class="card">
+        <div *ngIf="msg" class="text-danger">Select Number Of Players</div>
+        <div *ngIf="player1">
+            <li>player 1</li>
+           
+           </div>
+           <div *ngIf="player2" >
+            <li>player 1</li>
+            <li>player 2</li>
+            
+           </div>
+           <div *ngIf="player3">
+            <li>player 1</li>
+            <li>player 2</li>
+            <li>player 3</li>
+           
+           </div>
+           <div *ngIf="player4">
+            <li>player 1</li>
+            <li>player 2</li>
+            <li>player 3</li>
+            <li>player 4</li>
+           </div>
+       
+           <div class="d-flex justfy-content-between ml-4 mt-5 ">
+            <div class="team">
+            <h5>Team A</h5>
+            <div class="tm-icon">
+            <i class=" fas fa-user fa-2x"></i>
+            </div>
+            </div>
+            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="team ">
+            <h5>Team B</h5>
+            <div class="tm-icon">
+            <i class="fas fa-user fa-2x"></i>
+            </div>
+            </div>
+           
+            </div>
+
+    </div>
+     
+    <button (click)="hideusertwo()"  style="background-color: darkslategrey; height:40px; border-radius: 8px; font-weight: 700;"
+    class=" btn-md w-100 text-white mt-4 ">
+    <h4>Team - 3</h4>
+    </button>
+    <div *ngIf="hidetwo" class="card">
+        <div *ngIf="msg" class="text-danger">Select Number Of Players</div>
+       <div *ngIf="player1">
+      
+        <li >player 1</li>
+        
+       
+       </div>
+       <div *ngIf="player2" >
+        <li>player 1</li>
+        <li>player 2</li>
+        
+       </div>
+       <div *ngIf="player3">
+        <li>player 1</li>
+        <li>player 2</li>
+        <li>player 3</li>
+       
+       </div>
+       <div *ngIf="player4">
+        <li>player 1</li>
+        <li>player 2</li>
+        <li>player 3</li>
+        <li>player 4</li>
+       </div>
+       <div class="d-flex justfy-content-between ml-4 mt-5 ">
+        <div class="team">
+        <h5>Team A</h5>
+        <div class="tm-icon">
+        <i class=" fas fa-user fa-2x"></i>
+        </div>
+        </div>
+        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="team ">
+        <h5>Team B</h5>
+        <div class="tm-icon">
+        <i class="fas fa-user fa-2x"></i>
+        </div>
+        </div>
+        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="team">
+        <h5>Team C</h5>
+        <div class="tm-icon">
+        <i class="fas fa-user fa-2x "></i>
+        </div>
+        </div>
+        </div>
+    </div>
+
+ 
+
+    <button (click)="hideuserthree()"  style="background-color: darkslategrey; height:40px; border-radius: 8px; font-weight: 700;"
+    class=" btn-md w-100 text-white mt-4 ">
+    <h4>Team - 4</h4>
+    </button>
+    <div *ngIf="hidethree" class="card">
+        <div *ngIf="msg" class="text-danger">Select Number Of Players</div>
+        <div *ngIf="player1">
+            <li>player 1</li>
+           
+           </div>
+           <div *ngIf="player2" >
+            <li>player 1</li>
+            <li>player 2</li>
+            
+           </div>
+           <div *ngIf="player3">
+            <li>player 1</li>
+            <li>player 2</li>
+            <li>player 3</li>
+           
+           </div>
+           <div *ngIf="player4">
+            <li>player 1</li>
+            <li>player 2</li>
+            <li>player 3</li>
+            <li>player 4</li>
+           </div>
+        
+           <div class="d-flex justfy-content-between ml-4 mt-5 ">
+            <div class="team">
+            <h5>Team A</h5>
+            <div class="tm-icon">
+            <i class=" fas fa-user fa-2x"></i>
+            </div>
+            </div>
+            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="team ">
+            <h5>Team B</h5>
+            <div class="tm-icon">
+            <i class="fas fa-user fa-2x"></i>
+            </div>
+            </div>
+            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="team">
+            <h5>Team C</h5>
+            <div class="tm-icon">
+            <i class="fas fa-user fa-2x "></i>
+            </div>
+            </div>
+            <div class="team">
+                <h5>Team D</h5>
+                <div class="tm-icon">
+                <i class="fas fa-user fa-2x "></i>
+                </div>
+                </div>
+            </div>
+    </div>
+
+ 
+
+
+    </div>
+    <div class="col-md-3 mt-4">
+    <div class="player-Box p-2 ">
+    <div  class="custom-control custom-radio m-2">
+    <input (click)="playerone()" type="radio"class="custom-control-input " id="defaultUnchecked" name="defaultExampleRadios">
+    <label class="custom-control-label" for="defaultUnchecked"><button class="raj">1 Player<i class="fas fa-coins"><span>&nbsp;&nbsp;1600</span></i></button></label>
+    </div>
+    <div class="custom-control custom-radio m-2">
+    <input  (click)="playertwo()"  type="radio"class="custom-control-input"id="deaultUnchecked"name="defaultExampleRadios">
+    <label class="custom-control-label"for="deaultUnchecked"><button class="raj">2 Player<i class="fas fa-coins"><span>&nbsp;&nbsp;1600</span></i></button></label>
+    </div>
+     
+    <div class="custom-control custom-radio m-2">
+     <input (click)="playerthree()" type="radio" class="custom-control-input" id="defaulUnchecked3" name="defaultExampleRadios">
+     <label class="custom-control-label" for="defaulUnchecked3"><button class="raj">3 Player<i class="fas fa-coins"><span>&nbsp;&nbsp;1600</span></i></button></label>
+     </div>
+     
+     <div class="custom-control custom-radio m-2">
+     
+     <input (click)="playerfour()" type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked>
+     <label class="custom-control-label" for="defaultChecked"><button class="raj">4 Players<i class="fas fa-coins"><span>&nbsp;&nbsp;1600</span></i></button></label>
+     </div>
+     </div>
+     </div>
+     <div class="col-md-3"></div>
+     </div>
+     
+     <div class="row mt-3">
+     <div class="col-md-4"></div>
+<!--      
+     <div class="d-flex justfy-content-between ml-4 mt-5 ">
+     <div class="team">
+     <h5>Team A</h5>
+     <div class="tm-icon">
+     <i class=" fas fa-user fa-2x"></i>
+     </div>
+     </div>
+     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+     <div class="team ">
+     <h5>Team B</h5>
+     <div class="tm-icon">
+     <i class="fas fa-user fa-2x"></i>
+     </div>
+     </div>
+     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+     <div class="team">
+     <h5>Team C</h5>
+     <div class="tm-icon">
+     <i class="fas fa-user fa-2x "></i>
+     </div>
+     </div>
+     </div> -->
+     </div>
+     <div class="row">
+     <div class="col-md-4"></div>
+     <div class="col-md-4 mt-5">
+     <button style="background-color: darkslategrey; height:40px; border-radius: 8px; font-weight: 700;"
+     class=" btn-md w-75 text-white ">
+     <h4>Play Game</h4>
+     </button>
+     </div>
+     
+     </div>
+    </app-header>
