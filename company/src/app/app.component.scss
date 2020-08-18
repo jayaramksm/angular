@@ -1,0 +1,39 @@
+
+.card img{
+    width: 100%;
+    height: 350px;
+    margin-top: -50px;
+}
+#logo{
+    height: 60px;
+    width:100px;
+}
+
+.sticky{
+    position: sticky;
+    top: 0px;
+    z-index:1;
+}
+.font{
+    text-align: justify;
+    font-family: "Times New Roman", Times, serif;
+    // font-family: sans-serif;
+    // font-style: italic
+} 
+.nav-item{
+    font-weight: bold;
+}
+.nav-item:hover{
+    border-radius: 20px;
+    background-color:#FF4500;
+}
+.dropdown-item:hover{
+    border-radius: 20px;
+    color: #FF4500;
+}
+.nav-item:active{
+    background-color: blue
+}
+.nav-item:visited{
+    background-color: #FF4500;
+}
