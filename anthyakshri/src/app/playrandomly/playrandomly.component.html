@@ -1,0 +1,32 @@
+<app-header>
+    <div class="row">
+    <div class=" col-md-10 m-auto">
+     
+          <div class="text-right p-1 mt-2"><i class="far fa-clock fa-2x"><span>00:00:<app-timer></app-timer></span></i>&nbsp;&nbsp;
+          </div>
+          <div><h1 class="text-center font-weight-bold heading">Matching Players</h1></div>
+
+            <div class="row" *ngFor="let value of data">
+              <div class="col">
+                <p class="sub-head1 font-weight-bold ">TEAM A</p>
+               <div><img class="img-fluid " src="{{value.img}}"></div>
+               <p class="mt-2 text-center">{{value.name1}}</p>
+              </div>
+              <div class="col">
+                <h3 class="vs">Vs</h3>
+              </div>
+              <div class="col">
+                <p class="sub-head font-weight-bold">TEAM B</p>
+                <div><img class="img-fluid " src="{{value.img}}"></div>
+                <p class="mt-2 text-center">{{value.neme2}}</p>
+              </div>
+            </div>
+            <div class="text-center mt-3">
+              <button class="btn btn-primary text-white" routerLink="/live-compitaion">JOIN</button>
+            </div>
+      
+ 
+    </div>
+  </div>
+    
+    </app-header>

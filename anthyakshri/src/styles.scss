@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; font-family: 'Roboto Slab', serif;}
+body { margin: 0; font-family: 'Roboto Slab', serif; }
+h1,h2,h3,h4,h5,h6{font-family: 'Roboto Slab', serif;}
+.mat-drawer-backdrop.mat-drawer-shown{background-color:#fff}
+.mat-badge-content{border-radius:10%}
+.mat-badge-medium .mat-badge-content {width: 20px; height: 20px; line-height: 20px;}
+.mat-badge-medium.mat-badge-above .mat-badge-content{top:-6px}
+.mat-button-focus-overlay {background-color: transparent!important;}
+button:focus {outline: none !important;}
+button, input {outline: none !important;}
+.mat-drawer-inner-container{overflow-x:hidden !important}
+.card{background:#fefefe; box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);}
+
+.card-header{background:#fefefe; font-family: 'Roboto Slab', serif; text-align:center; font-weight:500;  font-size:24px; color:#232827; background:#fff; padding:10px 10px 20px 10px}
+.form-control{border-radius:4px; border:1px solid #c3c3c3; font-size:0.85rem; font-family: 'Roboto Slab', serif;}
+label{font-size:0.90rem; font-weight:400; color: #000; font-family: 'Roboto Slab', serif;}
+.form-check-label{font-size:0.70rem; font-family: 'Roboto Slab', serif; font-weight:500; line-height:16px}
+.btn:focus, .btn:active {outline: none !important; box-shadow: none !important;}
+//.form-control:focus{border-color:#e6e6e6; outline:0; -webkit-box-shadow:none; box-shadow:none;}
+.btn-primary{background:#099dfd; border:1px solid #099dfd; font-family: 'Roboto Slab', serif; font-weight:400}
+.btn-default{background:#fff; border:1px solid #383838; padding:8px 30px 8px 30px; font-weight:500}
+.btn-default:hover{background:#247977; border:1px solid #247977}
+#btnLogin{padding:8px 15px 8px 15px; line-height: 20px; font-size: 1rem; width:100%}
+a{color:#078ee6;}
+/*Tweeks*/
+.pr-40{padding-right:40px;}
+.pr-30{padding-right:30px;}
+.pr-13{padding-right:13px;}
+.pr-15{padding-right:15px;}
+.ft-24{font-size:24px}
+.ft-25{font-size:30px}
+.ft-15{font-size:15px;}
+.ft-40{font-size:40px}
+.mt-n-20{margin-top:-20px}
+.mt-n-15{margin-top:-15px}
+.mt-n-10{margin-top:-10px}
+.mt-120{margin-top:120px}
+.ft-bold{font-weight:500}
+.ht-20{height:20px}
+.ht-34{height:34px !important}
+.bdr-top{border-top:1px solid #ccc}
+.mat-form-field-appearance-outline .mat-form-field-outline-start{border-radius:4px !important}
+.mat-form-field-appearance-outline .mat-form-field-outline-end{border-radius:4px !important}
+.mat-form-field-flex{height:38px; width:180px !important}
+
+.mat-form-field-label-wrapper{top:-17px}
+select.mat-input-element{top:-23px !important}
+.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button, .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button{top:-11px}
+input.mat-input-element{margin-top:-13px; vertical-align:top}
+.txt-limit{font-size:11px; color:#ccc}
+
+
+.mat-form-field-appearance-outline .mat-form-field-outline{border:1px solid #c3c3c3; border-radius:4px}
+.mat-list-base .mat-list-item .mat-list-item-content, .mat-list-base .mat-list-option .mat-list-item-content{font-family: 'Roboto Slab', serif; color:#000}
+.col-form-label{font-family: 'Roboto Slab', serif; font-weight:400}
+.mat-h2, .mat-title, .mat-typography h2{font-family: 'Roboto Slab', serif;}
+.mat-h1, .mat-headline, .mat-typography h1{font-family: 'Roboto Slab', serif; font-weight:500}
+.mat-table{font-family: 'Roboto Slab', serif; font-weight:400}
+.iti{display:block}
+.mat-list-base .mat-list-item .mat-list-item-content, .mat-list-base .mat-list-option .mat-list-item-content{font-size:14px}
+.mat-h4, .mat-subheading-1, .mat-typography h4{font-family: 'Roboto Slab', serif; font-weight:500}

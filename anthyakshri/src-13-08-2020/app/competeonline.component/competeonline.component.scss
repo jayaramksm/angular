@@ -1,0 +1,71 @@
+.btn-w{
+  width: 220px; 
+
+}
+.btn-rightnav:hover{
+  opacity: 0.5;
+  }
+.btn-rightnav{
+  background: linear-gradient(#ff00cc,#333399);
+}
+.right-layout {
+  border-left: 2px solid black;
+  box-shadow: 0px 0px 1px 0px gray;
+
+}
+.lessthen{
+  border-radius: 12px;
+  width: 20px;
+  height: 20px;
+}
+.position-lessthen{
+  position: relative;
+  bottom: 6px;
+  right: 3px;
+}
+.search{
+  position: relative;
+  bottom: 15px;
+  }
+  input{
+  border:3px solid white;
+  height:40px;
+  width:300px;
+  border-radius: 50px;
+  padding :0px 10px;
+  outline: none;
+  
+  }
+  
+  #search-bar{
+  // position: relative;
+  // top: 10;
+  color: black;
+  font-size: 19px;
+  }
+  .w-75{
+      background-color: #33cccc;
+      border-radius: 15px;
+  }
+  .font-online{
+      font-weight: bold;
+  }
+  .button-borders{
+      border-radius: 10px;
+  }
+  .button-border{
+      border-radius: 10px;
+      text-align: left;
+  }
+  .btn-image{
+      width: 30px ;
+      height: 30px;
+  }
+  .no-of-teams{
+    
+      margin-top: 20px;
+      width: 200px;
+      height: 80px;
+      background-color: #33cccc;
+      border-radius: 15px;
+  }

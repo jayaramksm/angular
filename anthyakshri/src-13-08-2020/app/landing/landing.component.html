@@ -1,0 +1,19 @@
+<div class="head">
+    <div class="row mr-0 ml-0">
+        <div class="col-xl-8">
+            <div class="logo pb-2"><h1>ANTHYAKSHARI</h1></div>
+        </div>
+        <div class="col-xl-4">
+            <div class="text-right mt-3">
+                <span class="pr-3" *ngIf="newAccount">New to Anthyakshari ?</span>
+                <span class="pr-3" *ngIf="alreadyAccount">Already have an account?</span>
+                <span *ngIf="btnLogin"><a class="btn btn-primary" id="btnShowLogin" [class.active]="logincomp" type="button" (click)="loginclicked()">Login</a></span>
+                <span *ngIf="btnSignup"><a class="btn btn-primary" id="btnShowSignup" type="button" [class.active]="submitComp" (click)="submitclicked()">Sign up</a></span>
+            </div>
+        </div>
+        <div>
+        <app-signup *ngIf="submitComp"></app-signup>
+        <app-login *ngIf="logincomp"></app-login>
+        </div>
+    </div><!---row-->
+</div>

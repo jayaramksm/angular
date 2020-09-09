@@ -1,0 +1,236 @@
+<div class="container-fluid m-0 p-0 d-flex justify-content-between align-items-center header  pt-1">
+    <div class="d-flex justify-content-around align-items-center">
+      <i (click)=" liftnav()" class="text-white ml-3"><img class="size text-white " src="assets\menu.png" alt=""></i>
+      <i class="text-white ml-3"><a routerLink="/home"><img class="coin text-white " src="assets\home.png" alt=""></a></i>
+      <i class="text-white ml-3"><a routerLink="/dashbord"><img class="coin text-white " src="assets\dashboard.png" alt=""></a></i>
+
+    </div>
+    <div class="d-flex justify-content-center mt-4">
+      <div class="search">
+        <input type="text" name="box" placeholder="Start your search...">
+        
+        <div id="search-bar"class="fas fa-search"></div>
+        
+        </div>
+    </div>
+    <div class="d-flex justify-content-around align-items-center">
+      <i class="text-white ml-4"><img class="size text-white " src="assets\diamonds.png" alt=""></i>
+      <h1 class="mt-3 text-white">25</h1>
+      <i class="text-white ml-4"><img class="coin text-white " src="assets\coin.png" alt=""></i>
+      <h1 class="mt-3 text-white ml-2 ">5050</h1>
+      <i class="text-white ml-4"><img class="coin text-white " src="assets\bell.png" alt=""></i>
+      <i class="text-white ml-4"><img class="size text-white " src="assets\friend-request.png" alt=""></i>
+      <div>
+        <i class="text-white ml-3 mr-4 " [matMenuTriggerFor]="menu"><img class="coin text-white bg-white " src="assets\user-bg.png" alt=""></i>
+        <mat-menu #menu="matMenu">
+          <div class="d-flex">
+          <i class="fa fa-cog fa-2x"></i>
+          <button mat-flat-button mat-menu-item><a routerLink="/settings"><h2>Settings</h2></a></button>
+          </div>
+          <div class="d-flex">
+            <i class="far fa-id-badge fa-2x"></i>
+            <button mat-raised-button mat-menu-item><h2>Contacts</h2></button>
+          </div>
+          <div class="d-flex">
+            <i class="fa fa-sign-out fa-2x"></i>
+            <button mat-raised-button mat-menu-item><a routerLink="/login"><h2>Logout</h2></a></button>
+          </div>
+        </mat-menu>
+  
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="row p-0 m-0">
+    <div *ngIf="hideleftnav" class="col-md-1 p-2 col-md-2side  pt-1 side" id="sidenav">
+
+      <div class="text-center mt-0 mb-1"><a routerLink="/profile"><img class="icons" src="assets\user-bg.png" alt=""></a></div>
+      <hr class="m-0 p-0" />
+      <div class="text-center mt-1 mb-1"><a routerLink="/mypage"><img class="icons" src="assets\flag.png" alt=""></a></div>
+      <hr class="m-0 p-0" />
+      <div class="text-center mt-1 mb-1"><img class="icons" src="assets\crown.png" alt=""></div>
+      <hr class="m-0 p-0" />
+      <div class="text-center mt-1 mb-1"><img class="icons" src="assets\invite-frinds.png" alt=""></div>
+      <hr class="m-0 p-0" />
+      <div class="text-center mt-1 mb-1"><img class="icons" src="assets\advertise.png" alt=""></div>
+      <hr class="m-0 p-0" />
+      <div class="text-center mt-1 mb-1"><a routerLink="/changepassword"><img class="icons" src="assets\security.png" alt=""></a></div>
+      <hr class="m-0 p-0" />
+      <div class="text-center mt-1 mb-1"><img class="icons" src="assets\spin.png" alt=""></div>
+      <hr class="m-0 p-0" />
+      <div class="text-center mt-1 mb-1"><img class="icons" src="assets\youtube.png" alt=""></div>
+      <hr class="m-0 p-0" />
+      <div class="text-center mt-1 mb-1"><img class="icons" src="assets\download.png" alt=""></div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+
+        <div class="col-md-1 pr-1 mt-1">
+            <div class=" user-icon  w-100 text-center p-1">
+               <p> <i class="fa fa-clock-o fa-3x text-center fa-3x " ></i></p>
+               <h1 class="mt-2">00.00.00</h1>
+            </div>
+            <div class="user-icon  w-100 mt-2 text-center p-1">
+               <p> <i class="fa fa-stop-circle  text-danger  fa-3x text-center fa-3x " ></i></p>
+               <h1 class="mt-2">Buzzer</h1>
+            </div>
+            <div class="user-icon  mt-2 w-100 text-center p-1">
+               <h2 class="text-center text-warning">Team A</h2>
+               <h1 class="mt-2">00.00.00</h1>
+            </div>
+            <div class="user-icon  mt-2 w-100 text-center p-1">
+               <h2 class="text-center text-warning">Team B</h2>
+               <h1 class="mt-2">00.00.00</h1>
+            </div>
+            <div class="user-icon  mt-2 w-100 text-center p-1">
+               <h2 class="text-center text-warning">Team C</h2>
+               <h1 class="mt-2">00.00.00</h1>
+            </div>
+            <div class="user-icon  mt-2 w-100 text-center p-1">
+               <h2 class="text-center text-warning">Team D</h2>
+               <h1 class="mt-2">00.00.00</h1>
+            </div>
+            <div class="img d-flex mt-2 w-100 text-center p-1">
+               <img src="../../assets/eyes.webp" alt=""style= "width: 37px;height: 26px; margin-top: 9px;">
+             <div class="btn mb-2"><h1>2020</h1>
+            </div>
+           </div>
+   
+           </div>
+   
+           <div class="col-md-8">
+               
+               <div class="d-flex justify-content-around mt-1">
+                   <div class="size-box user-icon  p-3 m-2">
+                      
+                       <div class=" mt-5 text-center">
+                           <p class="text-right">  <i class="fa fa-ellipsis-v  fa-2x " ></i></p>
+                           <img src="../../assets/img.jpeg" alt="" class=" bg-primary text-white" style="width: 70px;height: 70px;">
+                          
+                           <div class="text-center mb-4"><h2> Team A </h2></div>
+                       </div>
+               </div>
+               <div class="size-box user-icon  p-3 m-2">
+                   <div class=" mt-5 text-center">
+                       <p class="text-right">  <i class="fa fa-ellipsis-v  fa-2x " ></i></p>
+                       <img src="../../assets/img.jpeg" alt="" class=" bg-primary text-white" style="width: 70px;height: 70px;">
+                      
+                       <div class="text-center mb-4"><h2> Team B </h2></div>
+                   </div>
+                      
+                   
+           </div>
+           <div class="size-box user-icon   p-3 m-2">
+                      
+               <div class=" mt-5 text-center">
+                   <p class="text-right">  <i class="fa fa-ellipsis-v  fa-2x " ></i></p>
+                   <img src="../../assets/img.jpeg" alt="" class=" bg-primary text-white" style="width: 70px;height: 70px;">
+                  
+                   <div class="text-center mb-4"><h2> Team C </h2></div>
+               </div>
+       </div>
+   
+           </div>
+   
+           <div class="d-flex justify-content-around mt-3">
+               <div class="size-box user-icon  p-3 m-2">
+                      
+                   <div class=" mt-5 text-center">
+                       <p class="text-right">  <i class="fa fa-ellipsis-v  fa-2x " ></i></p>
+                       <img src="../../assets/img.jpeg" alt="" class=" bg-primary text-white" style="width: 70px;height: 70px;">
+                      
+                       <div class="text-center mb-4"><h2> Team A </h2></div>
+                   </div>
+           </div>
+           <div class="size-box user-icon  p-3 m-2">
+                      
+               <div class=" mt-5 text-center">
+                   <p class="text-right">  <i class="fa fa-ellipsis-v  fa-2x " ></i></p>
+                   <img src="../../assets/img.jpeg" alt="" class=" bg-primary text-white" style="width: 70px;height: 70px;">
+                  
+                   <div class="text-center mb-4"><h2> Team B </h2></div>
+               </div>
+       </div>
+       <div class="size-box user-icon  p-3 m-2">
+                      
+           <div class=" mt-5 text-center">
+               <p class="text-right">  <i class="fa fa-ellipsis-v  fa-2x " ></i></p>
+               <img src="../../assets/img.jpeg" alt="" class=" bg-primary text-white" style="width: 70px;height: 70px;">
+              
+               <div class="text-center mb-4"><h2> Team C </h2></div>
+           </div>
+   </div>
+   
+       </div>
+   
+       <div class="d-flex justify-content-around mt-4">
+           <span >
+               <img src="../../assets/img.jpeg" alt=""class="user-icon  text-white" style="width: 70px;height: 70px;">
+               <p class="text-center"> Jay</p>
+           
+           </span>
+           <span>
+               <img src="../../assets/img.jpeg" alt=""class="user-icon  text-white" style="width: 70px;height: 70px;">
+              <p class="text-center"> surya</p></span>
+           <span>
+               <img src="../../assets/img.jpeg" alt=""class="user-icon  text-white" style="width: 70px;height: 70px;">
+               <p class="text-center">  rajeshwari</p></span>
+           <span>
+               <img src="../../assets/img.jpeg" alt=""class="user-icon  text-white" style="width: 70px;height: 70px;">
+               <p class="text-center">pranay</p></span>
+           <span>
+               <img src="../../assets/img.jpeg" alt=""class="user-icon  text-white" style="width: 70px;height: 70px;">
+               <p class="text-center">Darshan</p></span>
+           <span>
+               <img src="../../assets/img.jpeg" alt=""class="user-icon  text-white" style="width: 70px;height: 70px;">
+               <p class="text-center"> ram</p>   
+           </span>
+   
+       </div>
+   
+   
+       <div class="adujest text-center mt-3 d-flex ">
+           <button id="buttonicon" class="border btn btn-dark p-2 text-center w-50">
+               <i class="fa fa-microphone p-2 fa-2x" ></i>
+               <i class="fa fa-video-camera p-2 fa-2x" ></i>
+               <i class="fa fa-stop-circle  text-danger  p-2 fa-2x" ></i>
+                
+                <i class="fa fa-comments p-2 fa-2x"></i>
+                
+               <i (click)="hideuser()" class="fa fa-users p-2 fa-2x text-center  " ></i>
+               <i class="fa fa-share-square-o p-2 fa-2x" ></i>
+           </button>
+           
+      
+           </div>  
+   </div>
+   
+   <div *ngIf="display" class= " col-md-1 mt-5 d-flex justify-content-between ">
+    <ol>
+        <li><h1  class="user-icon">Pranay</h1></li>
+        <li><h1  class="user-icon">Jayaram</h1></li>
+        <li><h1 class="user-icon">Surya</h1></li>
+        <li><h1  class="user-icon">Rajeshwari</h1></li>
+        <li><h1  class="user-icon">Jay</h1></li>
+        </ol>
+</div>
+</div>
+
+
+        
+  
+   
+  

@@ -1,0 +1,31 @@
+
+<div class="card mr-1 mr-4 ml-3 mt-120" *ngIf="loginhide">
+    <div class="card-header">Login</div>
+    <div class="card-body">
+       <form #userForm="ngForm">
+           <!-- {{userForm.value|json}} -->
+           <div class="form-group">
+               <label>Username / Email</label>
+               <input type="text"  ngModel name="username" #phone="ngModel"  [class.is-invalid]=" phone.touched && phone.invalid " required class="form-control" >
+            </div>
+           
+           
+           <div class="form-group">
+               <label>Password</label>
+               <input type="password"  ngModel name="password" #pass="ngModel"  [class.is-invalid]=" pass.touched && pass.invalid " required class="form-control" >
+                      
+            </div>
+            <h5 *ngIf="errormsg" class="text-danger">Enter Valid Input</h5>
+           
+           <!-- {{name.className}} -->
+          
+           <button type="submit" class="btn btn-primary"  (click)="gotohomepage(userForm.value)" id="btnLogin">Login</button>
+           <div class="form-group pt-3"type="button" (click)="forgotpassclicked()"><a href="#">Forgot Password?</a></div>
+           <div class="form-divider" style="border-top:1px solid #e6e6e6"></div>
+           <div class="form-group pt-4">New to Anthyakshari ? <a (click)="creatacountclicked()" style="cursor:pointer">Create Account</a></div>
+       </form>
+    </div>
+    
+</div>
+<app-forgotpass *ngIf="forgotpassComp"></app-forgotpass>
+<app-signup *ngIf="signup"></app-signup>

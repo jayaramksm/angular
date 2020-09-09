@@ -1,0 +1,32 @@
+
+  <div class="card mr-1 mr-4 ml-3 mt-120" >
+  <div class="card-header">Verify Account</div>
+  <div class="row ">
+  
+    <div class="col-md-12 text-center">
+
+
+    <div  class="mt-3">
+        <img src="../../assets/img-sms.png">
+  <p class="mt-4">OTP has been sent to your registered mobile number and email</p>
+  <h4 class="text-center mb-2" style="font-weight: bold;">ENTER 4 DIGIT OTP</h4>
+<div class="d-flex justify-content-center">
+    <ng-otp-input  (onInputChange)="onOtpChange($event)" ></ng-otp-input>
+</div>
+<div class="d-flex justify-content-center mt-2 mb-2">
+    <small class="text-center">Didn't receive OTP? <a href="#">RESENT CODE</a></small>
+</div>
+
+<div class="d-flex justify-content-center mb-2">
+    <button class="w-75 text-center text-white btn btn-primary" (click)="verifyClick()">VERIFY NOW</button>    
+</div>
+
+      
+
+
+    </div>
+
+    </div>
+</div>
+  
+</div>

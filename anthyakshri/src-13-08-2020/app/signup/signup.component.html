@@ -1,0 +1,47 @@
+<div class="card mr-4 ml-3 mt-5" *ngIf="siginuphide">
+                 <div class="card-header">Sign up</div>
+                
+                 <div class="card-body">
+                    <form #userForm="ngForm">
+                    <div>
+                       
+                      
+                        <div class="form-group" >
+                          
+                            <label>Username</label>
+                            <input type="text" ngModel name="user" #name="ngModel"  [class.is-invalid]=" name.touched && name.invalid " required class="form-control" >
+                         
+                        </div>
+                       
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" ngModel name="email" #email="ngModel"  [class.is-invalid]=" email.touched && email.invalid " required class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="text"  ngModel name="phone" #phone="ngModel"  [class.is-invalid]=" phone.touched && phone.invalid " required class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password"  ngModel name="password" #pass="ngModel"  [class.is-invalid]=" pass.touched && pass.invalid " required class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label>Confirm Password</label>
+                            <input type="password" ngModel name="cpassword" #cpass="ngModel"  [class.is-invalid]=" cpass.touched && cpass.invalid " required class="form-control" >
+                        </div> 
+                        
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" ngModel name="subscribe" #check="ngModel"  [class.is-invalid]=" check.touched && check.invalid " required >
+                            <label class="form-check-label" for="exampleCheck1">I agree to Anthyakshari's Terms of Service, Privacy Policy and Content Policies</label>
+                        </div>
+                        <h5 *ngIf="valid" class="text-danger ">Enter Valid Input</h5>
+                        <button class="btn btn-primary" (click)="loginclicked(userForm.value)" id="btnLogin">Sign up</button>
+                        <!--- div class="form-group pt-3">
+                            <label  id="lblLogin">Already have an account? <a href="#"  (click)="logi()">Login</a></label>
+                        </div -->
+                       
+                    </div>
+                </form>
+                 </div>
+            </div>
+            <app-login *ngIf="logincom"></app-login>

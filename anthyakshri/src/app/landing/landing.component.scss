@@ -1,0 +1,82 @@
+
+/*.img-main{
+width: 100%;
+height: 789px;
+background-image: url('../../assets/img-landing-page.png') ;
+background-size: 100% 100%;
+}*/
+
+.img{
+ min-height: 100%; /* It doesn't have to be '%'. It can also use 'px'. */
+  /*width: 1600px;*/
+  max-width: 100%;
+  overflow: scroll;
+  margin: 0 auto;
+  padding: 0;
+
+  background-image: url(../../assets/home-landing-without-mic.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow:hidden
+}
+.logo-panel{position:absolute; top:200px; left:180px}
+.logo h1{font-size:80px; color:#fff; font-weight:bold; font-family: 'Merienda One', cursive; }
+.active{background-color:#247977; border:1px solid #247977; color:#fff !important;}
+
+@media all and (min-width: 1200px) {
+  .logo-panel{left:170px} 
+  .logo h1{font-size:100px;}
+}
+
+@media all and (max-width: 1200px) and (min-width: 1025px) {
+  .logo-panel{left:80px}
+  .logo h1{font-size:75px;}
+}
+
+@media all and (max-width: 1024px) and (min-width: 993px) {
+  .logo-panel{left:40px}  
+  .logo h1{font-size:65px;}
+}
+
+@media all and (max-width: 992px) and (min-width: 769px) {
+  .logo-panel{left:40px}  
+  .logo h1{font-size:55px;}
+}
+
+@media all and (max-width: 768px) and (min-width: 520px) {
+  .logo-panel{left:30px}   
+  .logo h1{font-size:40px;}
+}
+
+@media all and (max-width: 768px) and (min-width: 520px) {
+  .logo-panel{left:30px}   
+  .logo h1{font-size:40px;}
+}
+@media all and (min-width: 0px) and (max-width: 520px) {
+
+  .first{width: 100% !important;}
+  .second{width: 100%;
+    overflow: scroll;
+    padding-left: 5px !important;
+  padding: 0px !important;
+  margin-top: 0px !important;
+  margin-right: 0px !important;
+margin: 0px !important;}
+  .logo-panel{left:10px}  
+ 
+  .margin{margin-left: 20px !important;}
+  #btnShowLogin{margin-right: 10px !important;}
+ 
+  .logo h1{font-size:26px;text-align: center;}
+}
+
+@media all and (min-height:0px) and (max-height:400px){
+  .logo-panel{position:absolute; top:80px; left:10px}
+  .btnShowLogin{margin-right: 10px !important;}
+}
+
+
+
+
+

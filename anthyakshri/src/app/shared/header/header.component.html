@@ -1,0 +1,137 @@
+<mat-toolbar id="mainToolbar" color="primary">
+  <mat-toolbar-row>
+    <i mat-icon-button>
+      <mat-icon (click)="onToolbarMenuToggle()" id="toolbarMenu">menu</mat-icon>
+    </i>
+        <span class="pt-2 pr-3 pl-4"><mat-icon aria-hidden="false" aria-label="Example home icon"><a routerLink="/home"style="color:white;">home</a></mat-icon></span>
+        <span class="pt-2"><mat-icon aria-hidden="false" aria-label="icon"><a routerLink="/dashbord"style="color:white;">dashboard</a></mat-icon></span>
+    <span class="menu-spacer"></span>
+    <div>
+      <!---span class="pr-30">
+          <input type="text" class="custom-input" placeholder="Search"/>
+        </span -->
+      <span class="pr-30">
+          
+            <i class="fa fa-diamond pr-2"></i><span class="ft-15">25</span>
+         
+        </span>
+        <span class="pr-40">
+          
+            <img src="../../assets/coin-new.png" class="img-fluid pr-2" width="32px" height="32px"/><span class="ft-15">5050</span>
+          
+        </span>
+        <span class="pr-30"><mat-icon matBadge="1" matBadgeColor="success">notifications</mat-icon>
+            <span class="cdk-visually-hidden">1</span>
+        </span>
+        <span class="pr-15"><mat-icon matBadge="1" matBadgeColor="primary">supervisor_account</mat-icon>
+            <span class="cdk-visually-hidden">1</span>
+        </span>
+		<span>
+      <i mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" style="cursor:pointer">
+      <mat-icon>keyboard_arrow_down</mat-icon>
+      </i>
+<mat-menu #menu="matMenu" style="cursor:pointer">
+  <button mat-menu-item>
+    <mat-icon>settings</mat-icon>
+    <span><a routerLink="/settings"style="color:black;">Settings</a></span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>lock</mat-icon>
+    <span><a routerLink="/changepassword"style="color:black;">Change Password</a></span>
+  </button>
+  <button mat-menu-item [matMenuTriggerFor]="logout">
+    <mat-icon>power_settings_new</mat-icon>
+    <span><a style="color:black;">Logout</a>
+    </span>
+
+
+  </button>
+  <span>
+ 
+<mat-menu #logout="matMenu" style="cursor:pointer">
+<div  class="text-center mt-2 mb-2" style="width: 200px; font-weight: bold;">Confirm to Logout</div>
+<div class="d-flex text-center">
+<button class="mr-3 ml-3" mat-raised-button  routerLink="/login"> Yes</button>
+<button mat-raised-button > No</button>
+</div>
+
+</mat-menu>
+  </span>
+</mat-menu>
+    </span>
+	</div>
+  </mat-toolbar-row>
+
+ 
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav  mode="side" id="sidenav" [class.menu-open]=isMenuOpen [class.menu-close]=!isMenuOpen opened>
+    <mat-nav-list>
+    <div class="mt-3 mb-4">
+        <span class="user-panel"><mat-icon aria-hidden="false" aria-label="icon" class="ft-40">account_circle</mat-icon></span>
+        <span class="user-info">
+          <h4 class="txt-user">Username</h4>
+          <h4 class="txt-info" [ngStyle]="{'font-size.px': txtInfo}">info: xxxx</h4>
+        </span>
+     
+    </div>
+      <a mat-list-item [routerLink]="'/profile'"><span class="pr-13"><mat-icon aria-hidden="false" aria-label="icon">account_box</mat-icon></span> Profile </a>
+      <mat-divider></mat-divider>
+      <a mat-list-item [routerLink]="'/mypage'"><span class="pr-13"><mat-icon aria-hidden="false" aria-label="icon">list_alt</mat-icon></span> My Page</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item [routerLink]="'/top-players'"><span class="pr-13"><mat-icon aria-hidden="false" aria-label="icon">dynamic_feed</mat-icon></span> Top Players </a>
+      <mat-divider></mat-divider>
+      <a mat-list-item [routerLink]="'/invite-friends'"><span class="pr-13"><mat-icon aria-hidden="false" aria-label="icon">people_alt</mat-icon></span> Invite Friends </a>
+      <mat-divider></mat-divider>
+      <a mat-list-item [routerLink]="'/advertise'"><span class="pr-13"><mat-icon aria-hidden="false" aria-label="icon">campaign</mat-icon></span> Advertise Here</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item [routerLink]="'/spin-coins'"><span class="pr-13"><mat-icon aria-hidden="false" aria-label="icon">trip_origin</mat-icon></span> Spin for Coins</a>
+      <!---mat-divider></mat-divider>
+      <a mat-list-item [routerLink]="'/watch-videos'"><span class="pr-13"><mat-icon aria-hidden="false" aria-label="icon">videocam</mat-icon></span> Watch Videos</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item [routerLink]="'/get-apps'"><span class="pr-13"><mat-icon aria-hidden="false" aria-label="icon">apps</mat-icon></span> Get your App</a>
+      < a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Watch Videos</a -->
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content [ngStyle]="{'margin-left.px': contentMargin}">
+    <div style="height: 88vh;">
+      <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
+         <ng-content></ng-content>
+          <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-4" style="position:absolute; bottom:-200px">
+                <mat-card class="example-card" >
+                    <mat-card-content>
+                        <div class="ad-content">Ad</div>
+                        <!-- <div class="ad-content text-center" *ngIf="textadd"><h1>advertise Text</h1></div> -->
+                    </mat-card-content>
+                </mat-card>
+            </div>
+          </div><!---row -->
+        </div><!-- col-md-9 -->
+
+        <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 mb-4 mt-4">
+          <div>
+            <mat-card class="example-card">
+            <mat-card-title class="text-center pt-2 pb-1">Live Performance</mat-card-title>
+                <mat-card-content>
+                    <div class="ad-content"></div>
+                </mat-card-content>
+            </mat-card>
+          </div>
+          <div class="mt-4">
+            <mat-card class="example-card">
+            <mat-card-title class="text-center pt-2 pb-1">Live Competitions</mat-card-title>
+                <mat-card-content>
+                    <div class="ad-content"></div>
+                </mat-card-content>
+            </mat-card>
+          </div>
+        </div><!-- col-xl-3 -->
+      </div><!-- row -->
+      </div><!--- container-fluid -->
+     </div> 
+  </mat-sidenav-content>
+</mat-sidenav-container>

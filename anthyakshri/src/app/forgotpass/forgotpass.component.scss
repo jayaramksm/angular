@@ -1,0 +1,23 @@
+.text-center{
+    margin-left: 90px;
+    background-color:#0153aa;
+}
+
+.card{border:0px; box-shadow: 5px 3px 18px grey ; border-radius:6px}
+
+@media all and (min-width:0px) and (max-width:560px){
+    .card{
+        width: 100%;
+        padding: 5px;
+        margin-top: 50px;
+        margin-right: 0px;
+    }
+}
+@media all and (min-width:560px) and (max-width:960px){
+    .card{
+        width: 100%;
+        padding: 1px;
+        margin-top: 80px;
+        margin-right: 0px;
+    }
+}

@@ -1,0 +1,18 @@
+<div class="img">
+    <div class="row">
+        <div class="col-xl-9 col-lg-8 col-md-7 first col-sm-12">
+            <div class="logo-panel">
+                <div class="logo pb-2"><h1>ANTHYAKSHARI</h1></div>
+                <div class="text-center margin pt-5">
+                    <span><a class="btn btn-default mr-5" id="btnShowLogin" [class.active]="logincomp" type="button" (click)="loginclicked()">Login</a></span>
+                    <span><a class="btn btn-default" id="btnShowSignup" type="button" [class.active]="submitComp" (click)="submitclicked()">Sign up</a></span>
+                </div>
+            </div>
+        </div>
+       
+        <div class="col-xl-3 mt-1 mr-0 p-0 col-lg-4 second col-md-5 col-sm-12">
+            <div id="loginBg" *ngIf="logincomp || submitComp "  style="background:#fefefe; min-height:790px; width:408px; position:absolute; top:-5px; right:0px;"></div>
+            <app-signup *ngIf="submitComp"></app-signup>
+            <app-login *ngIf="logincomp"></app-login>
+        </div>
+</div>

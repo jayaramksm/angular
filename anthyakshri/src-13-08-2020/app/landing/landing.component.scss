@@ -1,0 +1,31 @@
+
+/*.img-main{
+width: 100%;
+height: 789px;
+background-image: url('../../assets/img-landing-page.png') ;
+background-size: 100% 100%;
+}*/
+
+.img{
+ min-height: 100%; /* It doesn't have to be '%'. It can also use 'px'. */
+  /*width: 1600px;*/
+  max-width: 100%;
+  overflow: scroll;
+  margin: 0 auto;
+  padding: 0;
+
+  background-image: url(../../assets/home-landing-without-mic.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow:hidden
+}
+.logo-panel{position:absolute; top:200px; left:180px}
+.logo h1{font-size: 40px; color: #000; padding: 12px 0 0 20px;  font-family: 'Lobster', cursive; }
+.active{background-color:#247977; border:1px solid #247977; color:#fff !important;}
+.head{background:#fff; height:60px; border-bottom:1px solid #ccc; box-shadow: 0 3px 6px rgba(0,0,0,.15);}
+.btn-primary{background:#099dfd; border:1px solid #099dfd; padding: 2px 8px 5px 8px;
+    color: #fff !important;
+    font-size: 14px;
+    border-radius: 4px;
+    font-weight: 100;}

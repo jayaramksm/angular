@@ -1,0 +1,23 @@
+<app-header>
+    <div class="h-60">
+        <div class="d-flex row h-60 justify-content-center align-items-center">
+            <div class="col-xl-6 col-lg-8 col-md-8 col-sm-12 mb-4 mt-4">
+            <mat-card class="example-card">
+                <mat-card-title class="text-center pt-1"><h4>Upload Profile Photo</h4></mat-card-title>
+                <div class="card-body bdr-top">
+                   <div class="row">
+                        <div class="col-md-12">
+                            <form action="" #userform="ngForm">
+                                {{userform.value|json}}
+                       <input type="file" ngModel name="browse" id="file-upload"  style="margin-bottom:10px; margin-left: 50px;">
+                    </form>  </div>
+                   </div> 
+                   <a class="btn btn-secondary btn-size btn-upload" type="button" (click)="Upload(userform.value)">Upload</a>
+                </div>
+                <img *ngIf="showimg" src="C:\Users\hp\Pictures\Screenshots(10).png" alt="{{image}}" style="width: 150px;height: 150px;">
+            </mat-card>
+            </div>
+        </div>
+    </div>
+    
+    </app-header>

@@ -1,0 +1,16 @@
+<div class="card mr-4 ml-3" style="margin-top:180px" *ngIf="forgotpasshide">
+    <div class="card-header">Forgot Your Password</div>
+    <div class="card-body">
+       <form #userForm="ngForm">
+   
+           <div class="form-group">
+               <label>Username / Email</label>
+               <input type="type"  ngModel name="password" #pass="ngModel"  [class.is-invalid]=" pass.touched && pass.invalid " required class="form-control" >
+               <h5 *ngIf="errormsg" class="text-danger">Enter Valid Input</h5>    
+           </div>
+           
+           <button mat-raised-button class="form-control btn  btn-primary "type="button" (click)="verifyclicked(userForm.value)">Next</button>
+           </form>
+    </div>
+</div>
+<app-verify *ngIf ="verifyComp"></app-verify>
