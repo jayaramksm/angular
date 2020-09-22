@@ -1,0 +1,38 @@
+
+  <nav class="navbar  navbar-expand-md navbar-light text-white " style="color:#EEF1F2;background-color: #33FFDA ;">
+   <a href="#" class="navbar-brand Display-1  fonts"><h1 class="font text-danger"> {{header}} </h1></a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-around" id="navbarCollapse">
+          <div class="navbar-nav">
+              <a routerLink="/home" class="nav-item hove nav-link active text-dark fonts ml-5"> <h2> SOLUTIONS </h2></a>
+               <a   class="nav-item nav-link ml-5 text-dark fonts"> <h2> 
+                <button mat-button [matMenuTriggerFor]="menu" class=""> <h2> ABOUT</h2></button>
+                <mat-menu #menu="matMenu">
+                  <button routerLink="/aboutgetset" mat-menu-item>ABOUT GETSET</button>
+                  <button routerLink="/aboutmarks" mat-menu-item>ON YOUR MARKS</button>
+                  <button routerLink="/abouthiring" mat-menu-item>WE'RE HIRING!</button>
+                </mat-menu>
+               </h2></a>
+        
+      
+            
+              <a routerLink="/contact"  class="nav-item nav-link text-dark ml-5 fonts"><h2>CONTACT</h2></a>
+        
+          
+         
+          <a (click)="openDialog()" class="nav-item nav-link ml-5 text-dark fonts"><h2>SUPPORT</h2></a>
+         
+          </div>
+          
+      </div>
+  </nav>
+ <hr>
+
+
+
+
+ 
+  <router-outlet></router-outlet>
