@@ -1,0 +1,112 @@
+
+<!-- <div class="d-flex mt-3">
+    <h1 class="text-left text-primary font" >Skill List</h1>
+
+</div> -->
+<div class="card-deck p-1">
+    <div class="card">
+<div class="topnav">
+  <a href=""><h1 class="text-left text-primary font" >Skill List</h1></a>
+  <form action="/action_page.php">
+    <input type="text" placeholder="Search.." name="search" style="border: 2px solid black;border-radius: 10px;width: 200px;">
+  </form>
+  </div>
+
+  <div class="text-right mt-2">
+  <mat-form-field class="w-25">
+    <mat-label>Category all</mat-label>
+    <mat-select [(ngModel)]="select">
+      <mat-option *ngFor="let food of foods" (click)="getshow()" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field *ngIf="show" class="w-25 ml-2">
+    <mat-label>Subcategory all</mat-label>
+    <mat-select [(ngModel)]="selecttwo">
+      <mat-option *ngFor="let foo of foo" [value]="foo.value">
+        {{foo.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button (click)="getfiltter()" class="btn btn-primary btn-pill mr-5 ml-2">Filtter</button>
+</div>
+
+<table class="table table-hover ">
+    <thead>
+        <tr>
+            <th>
+                skill Name
+            </th>
+            <th>Category</th>
+            <th>Subcategory</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let data of data">
+        <tr>
+            <td class="text-primary  font"> <h4 class="p-0 m-0 font  btn btn-primary" (click)="getclickdata(data.skill)"> <a > {{data.skill}}</a></h4></td>
+            <td class="font" >{{data.category}}</td>
+            <td class="font">{{data.subcategory}}</td>
+        </tr>
+    </tbody>
+
+</table>
+
+
+</div>
+<div class="card">
+    <div *ngIf="siehide">
+    <div *ngFor="let ite of sideshow">
+        <h1 class="text-primary p-3 font bg-light">{{ite.skill}}</h1>
+    </div>
+
+    <div class="text-right mt-3 mb-2">
+        <mat-form-field class="w-25">
+          <mat-label>Category all</mat-label>
+          <mat-select >
+            <mat-option *ngFor="let food of foods"  [value]="food.value">
+              {{food.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      
+        <mat-form-field class="w-25 ml-2">
+          <mat-label>Subcategory all</mat-label>
+          <mat-select [(ngModel)]="sidevalue">
+            <mat-option *ngFor="let foo of foo" [value]="foo.value">
+              {{foo.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      
+        <button (click)="finalsave()" class="btn btn-primary btn-pill mr-5 ml-2">Save</button>
+      </div>
+   
+         <table class="table table-hover " >
+            <thead>
+                <tr>
+                    <th>
+                        Job_title
+                    </th>
+                    <th>Strength"</th>
+                    <th>Delet</th>
+                </tr>
+            </thead>
+           
+            <tbody *ngFor="let items of jobtit" >
+              
+          
+                <tr >
+                    <td class="font">{{items.job_title}}</td>
+                    <td class="font" >{{items.strength}}</td>
+                    <td class="font"> <button class="btn btn-danger" (click)="remove(items)">Det</button></td>
+                </tr>
+            </tbody>
+         </table>
+        </div>
+</div>
+
+</div>
+
