@@ -33,17 +33,21 @@ export interface Food {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'GetSet';
   show = false
-  header="{GetSet}"
   data = null;
+  orginaldata = null;
   select= "";
-  selecttwo=""
-  selectcat=[]
-  sideshow = []
-  jobtit = []
-  sidevalue = ""
-  siehide = false
+  selecttwo="";
+  filleter_arr=[];
+  sideshow = [];
+  jobtit = [];
+  selectbox_rightside = "";
+  selectbox_rightside2 = "";
+  siehide = false;
+  searchbar = "";
+  searchbar_arr = [];
+  change_color1 = "";
+  change_color2 = "";
   foods: Food[] = [
     {value: 'Development Frameworks/Libraries & Languages', viewValue: '	Development Frameworks/Libraries & Languages'},
     {value: 'DevOps Tools', viewValue: 'DevOps Tools'},
@@ -64,23 +68,69 @@ export class AppComponent implements OnInit {
   }
  
 
-  openDialog() {
-    this.dialog.open(DialogElementsExampleDialog);
-  }
-  abc =   {
-    "id":2,
-    "name":"jaya",
-    "rollnom":"156p1a0391"
-}
+ 
+
+ngOnInit(){
+
+    this.api.getdata().subscribe(data=>{
+     
+     console.log(typeof(data["data"]))
+     console.log(data["data"])
+     this.data =data["data"];
+     this.orginaldata = data["data"];
+   },
+   error=>{
+     console.log("error")
+   })
+ 
+     }
 
 
-getselect(){
-  alert(this.select)
-  
-}
 
-getclickdata(val){
+     searchbars(){
+      console.log(this.searchbar)
+        this.data.forEach((item, index) => {
+        
+          if(item.skill == this.searchbar){
+            this.searchbar_arr.push(item)
+            
+          }
+         
+         });
+         this.data = this.searchbar_arr
+         console.log(this.searchbar_arr)
+      }
+
+
+     getfiltter(){
+
+      this.data.forEach((item, index) => {
+       if(item.subcategory == this.selecttwo && item.category == this.select){
+         this.filleter_arr.push(item)
+         console.log(item.id)
+       }
+      
+      });
+      
+      this.data = this.filleter_arr
+      
+      }
+
+
+
+
+      searchclear(){
+        this.data = this.orginaldata
+        this.searchbar_arr = [];
+        this.filleter_arr = [];
+        // this.jobtit = []
+      
+      }
+
+getclickdata(val,id,id2){
   this.siehide = true
+  this.change_color1 = id
+  this.change_color2 = id2
 console.log(val)
 this.data.forEach((item, index) => {
   if(item.skill == val){
@@ -93,60 +143,36 @@ this.data.forEach((item, index) => {
  });
  
 }
-remove(index){
-  console.log(name)
-  this.jobtit.splice(index,1)
 
-}
-finalsave(){
-  alert(this.sidevalue)
-  this.sideshow[0].subcategory = this.sidevalue
-
-}
-
-getfiltter(){
-
-this.data.forEach((item, index) => {
- if(item.subcategory == this.selecttwo && item.category == this.select){
-   this.selectcat.push(item)
-   console.log(item.id)
- }
-
-});
-
-this.data = this.selectcat
-
-}
 
 getshow(){
   this.show = true
 }
 
-  ngOnInit(){
+finalsave(){
+  
+  this.sideshow[0].subcategory = this.selectbox_rightside ;
+  this.sideshow[0].category = this.selectbox_rightside2 
+  document.getElementById(this.change_color1).classList.add("text-success")
+  document.getElementById(this.change_color2).classList.add("text-success")
+
+}
+
+remove(index){
+  // console.log(name+"name")
+  console.log(index)
+  this.jobtit.splice(index,1)
+
+}
 
 
- console.log(ELEMENT_DATA)
-   this.api.getdata().subscribe(data=>{
-    
-    console.log(typeof(data["data"]))
-    console.log(data["data"])
-    this.data =data["data"];
-  },
-  error=>{
-    console.log("error")
-  })
 
-    }
-      displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
 
-  applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
+
+
+
+
+  
+ 
     
 }
-@Component({
-  selector: 'dialog-elements-example-dialog',
-  templateUrl: 'dialog-elements-example-dialog.html',
-})
-export class DialogElementsExampleDialog {}

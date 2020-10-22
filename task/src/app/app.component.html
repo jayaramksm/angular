@@ -5,12 +5,17 @@
 </div> -->
 <div class="card-deck p-1">
     <div class="card">
-<div class="topnav">
+<div class="topnav d-flex justify-content-between">
   <a href=""><h1 class="text-left text-primary font" >Skill List</h1></a>
-  <form action="/action_page.php">
-    <input type="text" placeholder="Search.." name="search" style="border: 2px solid black;border-radius: 10px;width: 200px;">
-  </form>
+  <div class="text-right d-flex">
+   <p><input type="text" placeholder="Search Skill.." [(ngModel)]="searchbar" name="search" style="border: 2px solid black;border-radius: 10px;width: 200px;">
+   </p> 
+   <div class=""><button class="btn btn-primary font  mt-1 pb-1" (click)="searchbars()">Search</button>
+  <button class="btn btn-primary font mt-1 ml-1" (click)="searchclear()">Clear</button>
+  </div> 
   </div>
+  </div>
+ {{searchbar}}
 
   <div class="text-right mt-2">
   <mat-form-field class="w-25">
@@ -31,7 +36,8 @@
     </mat-select>
   </mat-form-field>
 
-  <button (click)="getfiltter()" class="btn btn-primary btn-pill mr-5 ml-2">Filtter</button>
+  <button (click)="getfiltter()" class="btn btn-primary btn-pill font ml-2">Filtter</button>
+  <button class="btn btn-primary font  ml-1 mr-5" (click)="searchclear()">Clear</button>
 </div>
 
 <table class="table table-hover ">
@@ -46,9 +52,9 @@
     </thead>
     <tbody *ngFor="let data of data">
         <tr>
-            <td class="text-primary  font"> <h4 class="p-0 m-0 font  btn btn-primary" (click)="getclickdata(data.skill)"> <a > {{data.skill}}</a></h4></td>
-            <td class="font" >{{data.category}}</td>
-            <td class="font">{{data.subcategory}}</td>
+            <td class="text-primary  font"> <h4 class="p-0 m-0 font  " (click)="getclickdata(data.skill,data.category,data.subcategory)"> <button class=" text-primary p-0  font" style="border: none;"> {{data.skill}}</button></h4></td>
+            <td id="{{data.category}}" class="font" >{{data.category}}</td>
+            <td id="{{data.subcategory}}" class="font">{{data.subcategory}}</td>
         </tr>
     </tbody>
 
@@ -65,7 +71,7 @@
     <div class="text-right mt-3 mb-2">
         <mat-form-field class="w-25">
           <mat-label>Category all</mat-label>
-          <mat-select >
+          <mat-select [(ngModel)]="selectbox_rightside2">
             <mat-option *ngFor="let food of foods"  [value]="food.value">
               {{food.viewValue}}
             </mat-option>
@@ -74,14 +80,14 @@
       
         <mat-form-field class="w-25 ml-2">
           <mat-label>Subcategory all</mat-label>
-          <mat-select [(ngModel)]="sidevalue">
+          <mat-select [(ngModel)]="selectbox_rightside">
             <mat-option *ngFor="let foo of foo" [value]="foo.value">
               {{foo.viewValue}}
             </mat-option>
           </mat-select>
         </mat-form-field>
       
-        <button (click)="finalsave()" class="btn btn-primary btn-pill mr-5 ml-2">Save</button>
+        <button (click)="finalsave()" class="btn btn-primary btn-pill font mr-5 ml-2">Save</button>
       </div>
    
          <table class="table table-hover " >
