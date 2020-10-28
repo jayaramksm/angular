@@ -1,0 +1,88 @@
+<div class="text-right ">
+<button class="btn btn-primary mt-3 w-25 mr-3" (click)="showadd()"> + Add Item</button>
+</div>
+<div>
+    <table class="table mt-3">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Cost</th>
+                <th>Color</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of apidata">
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.itemname}}</td>
+                <td>{{item.itemcost}}</td>
+                    <td>{{item.itemcategory}}</td>
+                    <td><button class="btn btn-success" (click)="updateid(item.id)">Edit</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<!-- add -->
+<div *ngIf="itemadd" class="container p-0 w-25 card mt-3">
+    <form #userForm="ngForm" class="p-2">
+        <!-- {{userForm.value|json}} -->
+        <div class="form-group">
+            <label>Itemname </label>
+            <input type="text"  ngModel name="itemname" #phone="ngModel"  [class.is-invalid]=" phone.touched && phone.invalid " required class="form-control" >
+         </div>
+        
+        
+        <div class="form-group">
+            <label>Itemcost</label>
+            <input type="number"  ngModel name="itemcost" #pass="ngModel"  [class.is-invalid]=" pass.touched && pass.invalid " required class="form-control" >
+                   
+         </div>
+         <div class="form-group">
+            <label>Itemcolor</label>
+            <input type="text"  ngModel name="itemcategory" #pass="ngModel"  [class.is-invalid]=" pass.touched && pass.invalid " required class="form-control" >
+                   
+         </div>
+        
+        </form>
+        <!-- {{name.className}} -->
+       <div class="card-footer text-right">
+        <button type="submit" class="btn btn-primary "  (click)="gotohomepage(userForm.value)" id="btnLogin">Add Item</button>
+     </div>
+</div>
+
+
+
+
+<!-- update -->
+
+
+
+<div *ngIf="updateitem" class="container p-0 w-25 card mt-3">
+    <form #updateForm="ngForm" class="p-2">
+        <!-- {{userForm.value|json}} -->
+        <div class="form-group">
+            <label>Itemname </label>
+            <input type="text"  ngModel name="name" #phone="ngModel"  [class.is-invalid]=" phone.touched && phone.invalid " required class="form-control" >
+         </div>
+        
+        
+        <div class="form-group">
+            <label>Itemcost</label>
+            <input type="number"  ngModel name="cost" #pass="ngModel"  [class.is-invalid]=" pass.touched && pass.invalid " required class="form-control" >
+                   
+         </div>
+         <div class="form-group">
+            <label>Itemcolor</label>
+            <input type="text"  ngModel name="category" #pass="ngModel"  [class.is-invalid]=" pass.touched && pass.invalid " required class="form-control" >
+                   
+         </div>
+        
+        </form>
+        <!-- {{name.className}} -->
+       <div class="card-footer text-right">
+        <button type="submit" class="btn btn-primary "  (click)="getupdate(updateForm.value)" id="btnLogin">Update Item</button>
+     </div>
+</div>
